@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Uni Sans';
+    src: url('UniSansRegular.eot');
+    src: url('UniSansRegular.eot?#iefix') format('embedded-opentype'),
+        url('UniSansRegular.woff2') format('woff2'),
+        url('UniSansRegular.woff') format('woff'),
+        url('UniSansRegular.ttf') format('truetype'),
+        url('UniSansRegular.svg#UniSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Trajan';
+    src: url('GoudyTrajan-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('proximanova_light.otf');
+    src: url('proximanova_regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

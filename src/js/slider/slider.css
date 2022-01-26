@@ -1,0 +1,98 @@
+.carousel {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 900px;
+  max-height: 600px;
+  position: relative;
+  margin-bottom: 100px; }
+.carousel img {
+  width: 250px !important;
+}
+  .slider-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none; }
+    .slider-indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 20px;
+      height: 20px;
+      margin: 0 10px;
+      border-radius: 100%;
+      cursor: pointer;
+      background-color: #0a0a0a;
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      opacity: .2;
+      transition: opacity .6s ease; }
+    .slider-indicators .active {
+      opacity: 1; }
+  .slider_item {
+    position: relative; }
+    .slider_item_description {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-size: 25px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.4); }
+  .slider-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    position: relative;
+    overflow: hidden; }
+  .slider-slides {
+    display: flex; }
+  .slider-prev, .slider-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: .9;
+    text-align: center;
+    font-size: 40px;
+    transition: opacity .15s ease;
+    text-decoration: none;
+    cursor: pointer; }
+    .slider-prev:hover, .slider-next:hover {
+      opacity: .5; }
+  
+@media (max-width: 1000px) {
+  .slider-next, .slider-prev {
+    display: none;
+  }
+}
+.op {
+  opacity: 0.5;
+}
+
+.trans {
+  transition: .3s; }
+
+/* @media (max-width: 900px) {
+  .carousel {
+    max-width: 400px;
+    max-height: 200px;
+    position: relative;
+    margin-bottom: 100px; }
+    .slider-indicators li {
+      width: 10px;
+      height: 10px; } } */

@@ -1,0 +1,266 @@
+$analyst_radius_vh: 0.5vh;
+$analyst_radius_px: 3px;
+
+header {
+    padding-top: 48px;
+    background: url('../img/bg/bgs.jpg') center bottom no-repeat;
+    background-size: cover;
+    height: 545px;
+    // border-bottom-left-radius: $radius;
+    // border-bottom-right-radius: $radius;
+
+    .mobile {
+        display: none;
+    }
+
+    .men {
+        position: absolute;
+        height: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &>img {
+            position: relative;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .analyst {
+            &>span {
+                display: block;
+            }
+
+            border: solid 2px grey;
+            border-radius: $analyst_radius_px;
+            position: absolute;
+            padding: 10px 15px;
+            width: 220px;
+            height: 70px;
+            left: -102px;
+            top: 130px;
+            z-index: 1;
+
+            &__name {
+                width: 100%;
+                font-family: Goudy Trajan;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 15px;
+                color: #FFFFFF;
+            }
+
+            &__descr {
+                margin-top: 4px;
+                width: 70%;
+                font-family: Uni Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+                opacity: 0.6;
+            }
+
+        }
+
+        .promo-video {
+            position: absolute;
+            cursor: pointer;
+            width: 210px;
+            height: 120px;
+            left: 225px;
+            top: 103px;
+            border-radius: $analyst_radius_px;
+            z-index: 2;
+        }
+    }
+
+    .mause {
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        &>img {
+            width: 100%;
+        }
+
+    }
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+    header {
+        padding-top: 7vh;
+        height: 100vh;
+
+        .social {
+            &__head {
+                height: 8.5vh;
+
+                .social {
+                    &__logo {
+                        width: 26vh;
+                    }
+
+                    &__links {
+                        margin-right: 4vh;
+
+                        .link {
+                            width: 5vh;
+                            height: 5vh;
+                            border-radius: $analyst_radius_vh;
+
+                            &:nth-last-child(1) {
+                                margin-left: 3.3vh;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .men {
+            height: 100vh;
+            top: 6vh;
+
+            .analyst {
+                border: 0.3vh;
+                border: solid 0.3vh grey;
+                border-radius: $analyst_radius_vh;
+                padding: 2vh 2vh;
+                width: 40vh;
+                height: 13vh;
+                left: -15vh;
+                top: 26vh;
+
+                &__name {
+                    font-size: 2.2vh;
+                    line-height: 2vh;
+                }
+
+                &__descr {
+                    margin-top: 1.5vh;
+                    width: 65%;
+                    font-size: 1.8vh;
+                    line-height: 2.4vh;
+                }
+
+            }
+
+            .promo-video {
+                width: 36vh;
+                height: 20vh;
+                left: 41vh;
+                top: 22vh;
+                border-radius: $analyst_radius_vh;
+            }
+        }
+
+        .mause {
+            width: 10vh;
+            height: 10vh;
+            bottom: 4vh;
+        }
+    }
+
+}
+
+
+@media (max-width:530px) {
+    header{
+        
+        .men {
+            .analyst {
+                top: 120px;
+                left: calc(-20vw + 20px);
+                &__descr {
+                    font-size: 10px;
+                }
+                &__name {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    header{
+        .social__links {
+            .link {
+                width: 30px;
+                height: 30px;
+                &:nth-last-child(1) {
+                    margin-left: 15px;
+                }
+            }
+        }
+        .men {
+            .promo-video {
+                width: 33vw;
+                top: 65px;
+                left: 34vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    header {
+        height: auto;
+        padding-bottom: 20px;
+
+        .men,
+        .mause {
+            display: none;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        .mobile {
+            display: block;
+            position: static;
+
+            &__video {
+                width: 100%;
+                margin-top: 24px;
+            }
+
+            &__title {
+                margin-top: 23px;
+                font-size: 15px;
+                line-height: 19px;
+                padding: 20px;
+            }
+        }
+
+        .social {
+            &__logo {
+                width: 35%;
+            }
+            .link {
+                $w: 20px;
+                border-radius: 5px;
+                width: $w;
+                height: $w;
+                &:nth-last-child(1) {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+    }
+
+}

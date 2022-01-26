@@ -1,0 +1,14 @@
+$radius: 100% 50%;
+
+@mixin point {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #414141;
+}
+

@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 1266px;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+
+@media (min-width: 1024px) {
+    .container__head {
+        max-width:170vh;
+    }
+}

@@ -1,0 +1,14 @@
+.reviews {
+    margin-top: 102px;
+    &__img {
+        // margin-top: 24px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &>div {
+            margin: 25px 25px 0;
+        }
+    }
+}
