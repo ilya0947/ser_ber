@@ -17,3 +17,17 @@
         max-width:170vh;
     }
 }
+
+@media (max-width: 1024px) {
+
+    .container {
+        max-width:800px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width:675px;
+    }
+}

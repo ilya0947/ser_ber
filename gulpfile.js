@@ -9,7 +9,10 @@ const cleanCSS = require('gulp-clean-css');
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "./src/",
+            serveStaticOptions: {
+                extensions: ["html"]
+            }
         },
         port: 4000,
         notify: true

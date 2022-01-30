@@ -73,6 +73,20 @@ header {
             top: 103px;
             border-radius: $analyst_radius_px;
             z-index: 2;
+            &__wrapp {
+                .close {
+                    display: none;
+                    position: absolute;
+                    top: -40px;
+                    right: 0;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 40px;
+                }
+                &>video {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -103,8 +117,6 @@ header {
 
         .social {
             &__head {
-                height: 8.5vh;
-
                 .social {
                     &__logo {
                         width: 26vh;
@@ -114,8 +126,9 @@ header {
                         margin-right: 4vh;
 
                         .link {
-                            width: 5vh;
-                            height: 5vh;
+                            $wh-link-1024: 5vh;
+                            width: $wh-link-1024;
+                            height: $wh-link-1024;
                             border-radius: $analyst_radius_vh;
 
                             &:nth-last-child(1) {
@@ -163,6 +176,16 @@ header {
                 left: 41vh;
                 top: 22vh;
                 border-radius: $analyst_radius_vh;
+                &__wrapp {
+                    .close {
+                        display: none;
+                        cursor: pointer;
+                        color: white;
+                        font-size: 8vh;
+                        top: -8vh;
+                
+                    }
+                }
             }
         }
 
@@ -198,8 +221,9 @@ header {
     header{
         .social__links {
             .link {
-                width: 30px;
-                height: 30px;
+                $wh-link-640: 30px;
+                width: $wh-link-640;
+                height: $wh-link-640;
                 &:nth-last-child(1) {
                     margin-left: 15px;
                 }
@@ -240,9 +264,9 @@ header {
 
             &__title {
                 margin-top: 23px;
-                font-size: 15px;
+                font-size: 14px;
                 line-height: 19px;
-                padding: 20px;
+                padding: 0 20px;
             }
         }
 
@@ -251,12 +275,12 @@ header {
                 width: 35%;
             }
             .link {
-                $w: 20px;
+                $wh-link: 20px;
                 border-radius: 5px;
-                width: $w;
-                height: $w;
+                width: $wh-link;
+                height: $wh-link;
                 &:nth-last-child(1) {
-                    margin-left: 5px;
+                    margin-left: 15px;
                 }
             }
         }

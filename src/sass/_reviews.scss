@@ -1,14 +1,58 @@
 .reviews {
     margin-top: 102px;
     &__img {
-        // margin-top: 24px;
-        max-width: 100%;
+        padding: 0 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         &>div {
             margin: 25px 25px 0;
+            &>img {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .reviews {
+        &__img {
+            &>div {
+                margin: 25px 5px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        &__img {
+            &>div {
+                &>img {
+                    height: 260px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .reviews {
+        margin-top: 40px;
+        &__wrapp {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        &__img {
+            width: max-content;
+            &>div {
+                margin: 15px 5px 0;
+                &>img {
+                    height: 400px;
+                }
+            }
         }
     }
 }
