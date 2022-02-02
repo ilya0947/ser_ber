@@ -14,7 +14,7 @@ gulp.task('server', function() {
                 extensions: ["html"]
             }
         },
-        port: 4000,
+        port: 3000,
         notify: true
     });
     gulp.watch("src/*.html").on("change", browserSync.reload);

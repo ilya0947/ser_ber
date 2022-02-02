@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const slides = slideCont.children;
             const lastSlide = slides.length - 1;
             const time = 500;
+            const scale = 3;
             let x = 0;
             let activeClone = true;
 
@@ -25,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     } else {
                         slides[i].style.display = 'none';
                     }
-                    slides[i].querySelector('img').classList.remove('active');
+                    slides[i].querySelector('img').style.transform = 'scale(1)';
                     setTimeout(() => {},time);
                     slides[i].ontransitionend = () => {
                         slides[i].querySelector('img').removeAttribute('style');
@@ -35,17 +36,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 const prevX = slides[0].querySelector('img').getBoundingClientRect().left;
                 const nextX = slides[1].querySelector('img').getBoundingClientRect().left;
                 x = (nextX - prevX);
-                slides[1].querySelector('img').classList.add('active');
+                slides[1].querySelector('img').style.transform = `translateX(-${scale}%) scale(1.${scale})`;
             }
             showSlide();
 
             function calcX(slide, skale, prev) {
                 const vector = prev ? -x : x;
-                const scale = skale ? 1.2 : 1;
+                const sc = skale ? `1.${scale}` : 1;
                 const active = slide.style.cssText = `
                 transition: 0.5s all;
-                transform: translateX(${vector}px) scale(${scale});
+                transform: translateX(${vector}px) scale(${sc});
                 z-index: 30`;
+                // alert()
                 return active;
             }
 
@@ -68,7 +70,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
             next.addEventListener('click', (e) => {
                 e.preventDefault();
+                // alert(scale);
+                
+                slides[0].querySelector('img').classList.add ('slideOut');
+                createImgClone(slides);
+                
+                calcX(slides[2].querySelector('img'), true, true);
+                calcX(slides[1].querySelector('img'), false, true);
+                    
+                slides[0].querySelector('img').onanimationend = () => {
+                    slides[0].querySelector('img').classList.remove('slideOut');
+                    slideCont.appendChild(slides[0]);
+                    slides[0].querySelector('img').onanimationend = false;
+                    showSlide();
+                };
+            });
 
+            prev.addEventListener('click', (e) => {
+                e.preventDefault();
+    
                 slides[2].querySelector('img').classList.add ('slideOut');
                 createImgClone(slides, true);
                     
@@ -82,25 +102,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     showSlide();
                 };
             });
-
-            prev.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                slides[0].querySelector('img').classList.add ('slideOut');
-                createImgClone(slides);
-
-                calcX(slides[2].querySelector('img'), true, true);
-                calcX(slides[1].querySelector('img'), false, true);
-                    
-                slides[0].querySelector('img').onanimationend = () => {
-                    slides[0].querySelector('img').classList.remove('slideOut');
-                    slideCont.appendChild(slides[0]);
-                    slides[0].querySelector('img').onanimationend = false;
-                    showSlide();
-                };
-            });
         }
-
+        
         slider('[data-slides]', '[data-next]', '[data-prev]');
         
         window.addEventListener('resize', () => {
@@ -161,5 +164,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
             playMobileVideo('[data-mobile_video]');
+
     })()
 });

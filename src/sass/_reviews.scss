@@ -1,5 +1,5 @@
 .reviews {
-    margin-top: 102px;
+    margin: 102px auto 0;
     &__img {
         padding: 0 20px;
         display: flex;
@@ -40,6 +40,7 @@
 @media (max-width: 426px) {
     .reviews {
         margin-top: 40px;
+        width: 95%;
         &__wrapp {
             overflow-x: scroll;
             overflow-y: hidden;

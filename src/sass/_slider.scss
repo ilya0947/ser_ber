@@ -26,9 +26,6 @@
             font-size: 40px;
             width: 33%;
             height: 300px;
-            &__mobile {
-                // display: none;
-            }
             &::before {
                 content: "";
                 position: absolute;
@@ -86,15 +83,6 @@
         }
     }
 
-    .active_next {
-        transform: translateX(-2%) scale(1.2);
-    }
-    .active_prev {
-        transform: translateX(-2%) scale(1.2);
-    }
-    .active {
-        transform: translateX(-2%) scale(1.2);
-    }
 }
 
 @media (max-width: 1024px) {
@@ -120,7 +108,7 @@
 @media (max-width: 426px) {
     .br-case {
         &__carousel {
-            max-width: 300px;
+            max-width: 95%;
             margin-top: 5px;
             .slide-wrap {
                 overflow-x: scroll;
@@ -137,6 +125,10 @@
             .slide {
                 width: auto;
                 height: 350px;
+                margin-right: 10px;
+                &:nth-last-child(1) {
+                    margin-right: 0;
+                }
                 &::before{
                     display: none;
                 }

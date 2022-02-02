@@ -178,7 +178,7 @@ footer {
         background-color: #000;//
 
         .phone {
-            width: 100px;
+            width: auto;
             &>div {
                 width: 150px;
                 height: 250px;
@@ -188,12 +188,21 @@ footer {
         }
 
         .social {
+            display: block;
+            margin-top: 20px;
+            &__links {
+                &__foot {
+                    position: static;
+                    margin-top: 30px;
+                    justify-content: center;
+                }
+            }
             &__logo {
-                width: 100px;
+                width: 160px;
             }
             &__links {
                 .link {
-                    $wh_foot-426: 20px;
+                    $wh_foot-426: 30px;
                     width: $wh_foot-426 !important;
                     height: $wh_foot-426 !important;
                     border-radius: 5px;
@@ -212,17 +221,21 @@ footer {
                 width: auto;
                 .title__footer {
                     font-size: 6.5vw;
+                    padding-right: 50px;
                 }
             }
             &__subtitle {
-                padding-right: 20vw;
+                padding-right: 110px;
                 font-size: 4vw;
+                min-height: 80px;
             }
             &__list {
-
+                margin-top: 40px;
+                padding: 0;
                 &__item {
-                    font-size: 10px;
-                    line-height: 14px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-right: 10px;
                     &::before {
                         $S_before: 15px;
                         width: $S_before;

@@ -59,7 +59,18 @@ $offset: -48px;
                     right: 50%;
                     transform: translate(50%, -50%);
                 }
+                
+            }
+        }
+    }
+}
 
+@media (max-width:767px) {
+    .description {
+        .advant {
+            &__point {
+                font-size: 18px;
+                line-height: 25px;
             }
         }
     }
@@ -81,7 +92,7 @@ $offset: -48px;
                     width: 100%;
                     margin-left: 0;
                     text-align: left;
-                    padding: 0 56px;
+                    padding: 0 10px 0  60px;
                 }
             }
             &__left {
@@ -92,15 +103,4 @@ $offset: -48px;
         }
     }
     
-}
-
-@media (max-width:767px) {
-    .description {
-        .advant {
-            &__point {
-                font-size: 13px;
-                line-height: 18px;
-            }
-        }
-    }
 }
